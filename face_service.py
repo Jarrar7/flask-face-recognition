@@ -8,9 +8,11 @@ import logging
 import json
 import io
 import threading
+from flask_cors import CORS
 
 # Initialize the Flask app
 app = Flask(__name__)
+CORS(app)
 
 # Initialize MTCNN and Dlib CNN detectors
 mtcnn_detector = MTCNN()
