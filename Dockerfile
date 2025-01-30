@@ -7,9 +7,11 @@ WORKDIR /app
 # Copy project files
 COPY . /app/
 
-# Install dependencies
+# Upgrade pip before installing dependencies
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Expose port 5001 (or your Flask port)
 EXPOSE 5001
