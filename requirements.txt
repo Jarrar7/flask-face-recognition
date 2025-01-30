@@ -1,0 +1,7 @@
+flask
+face_recognition
+numpy
+pillow
+mtcnn
+dlib
+gunicorn
