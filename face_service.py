@@ -83,6 +83,11 @@ def detect_faces_with_dlib(image, timeout=5):
     return face_locations
 
 
+@app.route("/health", methods=["GET"])
+def health_check():
+    return "OK", 200
+
+
 @app.route('/encode', methods=['POST'])
 def encode_faces():
     """
