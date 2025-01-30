@@ -1,3 +1,7 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"  # Force CPU mode
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"  # Reduce RAM usage
+
 from flask import Flask, request, jsonify, make_response
 import face_recognition
 import numpy as np
